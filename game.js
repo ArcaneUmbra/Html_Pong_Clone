@@ -1,9 +1,3 @@
-/*	TODO	
- *
- *
- *
- */
-
 //Canvas
 var canvas = document.getElementById("gc");
 var ctx = canvas.getContext("2d");
@@ -404,6 +398,6 @@ document.addEventListener('keydown', function (event) {
 		game_State = true;
 		main();
 		game_Reset();
-		console.log("Check Start is running");
+		//console.log("Check Start is running");
 	}
 });
