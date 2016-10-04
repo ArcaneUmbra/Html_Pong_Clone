@@ -96,7 +96,7 @@ var collision = function (modifier) {
 	if (pl_Paddle.y >= canvas.height - pl_Paddle.height) {	//Paddle hits bottom
 		pl_Paddle.y -= pl_Paddle.speed * modifier;
 	}
-	if (ball.x <= pl_Paddle.x + pl_Paddle.width && ball.y >= pl_Paddle.y && ball.y <= pl_Paddle.y + pl_Paddle.height) {
+	if (ball.x <= pl_Paddle.x + pl_Paddle.width && ball.x >= pl_Paddle.x && ball.y >= pl_Paddle.y && ball.y <= pl_Paddle.y + pl_Paddle.height) {
 		ball.dx = Math.abs(ball.dx);
 	}
 
@@ -107,7 +107,7 @@ var collision = function (modifier) {
 	if (comp_Paddle.y >= canvas.height - comp_Paddle.height) {	//Paddle hits bottom
 		comp_Paddle.y -= comp_Paddle.speed * modifier;
 	}
-	if (ball.x + ball.width >= comp_Paddle.x && ball.y >= comp_Paddle.y && ball.y <= comp_Paddle.y + comp_Paddle.height) {	//Paddle hits ball
+	if (ball.x + ball.width >= comp_Paddle.x && ball.x + ball.width <= comp_Paddle.x + compPaddle.width && ball.y >= comp_Paddle.y && ball.y <= comp_Paddle.y + comp_Paddle.height) {	//Paddle hits ball
 		ball.dx = ball.dx * -1;
 	}
 };
