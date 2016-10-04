@@ -107,7 +107,7 @@ var collision = function (modifier) {
 	if (comp_Paddle.y >= canvas.height - comp_Paddle.height) {	//Paddle hits bottom
 		comp_Paddle.y -= comp_Paddle.speed * modifier;
 	}
-	if (ball.x + ball.width >= comp_Paddle.x && ball.x + ball.width <= comp_Paddle.x + compPaddle.width && ball.y >= comp_Paddle.y && ball.y <= comp_Paddle.y + comp_Paddle.height) {	//Paddle hits ball
+	if (ball.x + ball.width >= comp_Paddle.x && ball.x + ball.width <= comp_Paddle.x + comp_Paddle.width && ball.y >= comp_Paddle.y && ball.y <= comp_Paddle.y + comp_Paddle.height) {	//Paddle hits ball
 		ball.dx = ball.dx * -1;
 	}
 };
